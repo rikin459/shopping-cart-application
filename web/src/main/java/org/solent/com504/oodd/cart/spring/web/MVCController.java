@@ -113,30 +113,103 @@ public class MVCController {
         return "home";
     }
 
-    @RequestMapping(value = "/about", method = {RequestMethod.GET, RequestMethod.POST})
+   @RequestMapping(value = "/about", method = {RequestMethod.GET, RequestMethod.POST})
     public String aboutCart(Model model, HttpSession session) {
 
         // get sessionUser from session
         User sessionUser = getSessionUser(session);
         model.addAttribute("sessionUser", sessionUser);
-        
+
         // used to set tab selected
         model.addAttribute("selectedPage", "about");
         return "about";
     }
 
-    @RequestMapping(value = "/contact", method = {RequestMethod.GET, RequestMethod.POST})
-    public String contactCart(Model model, HttpSession session) {
+     @RequestMapping(value = "/checkout", method = {RequestMethod.GET, RequestMethod.POST})
+    public String viewcheckout(Model model, HttpSession session) {
 
         // get sessionUser from session
         User sessionUser = getSessionUser(session);
         model.addAttribute("sessionUser", sessionUser);
-        
+
+        // used to set tab selected
+        model.addAttribute("selectedPage", "checkout");
+        return "checkout";
+    }
+
+
+    @RequestMapping(value = "/contact", method = {RequestMethod.GET, RequestMethod.POST})
+    public String contactCart(Model model, HttpSession session) {
+        // get sessionUser from session
+        User sessionUser = getSessionUser(session);
+        model.addAttribute("sessionUser", sessionUser);
+
         // used to set tab selected
         model.addAttribute("selectedPage", "contact");
         return "contact";
     }
 
+    @RequestMapping(value = "/catalog", method = {RequestMethod.GET, RequestMethod.POST})
+    public String catalogList(Model model, HttpSession session) {
+        // get sessionUser from session
+        User sessionUser = getSessionUser(session);
+        model.addAttribute("sessionUser", sessionUser);
+
+     //   List<ShoppingItem> availableItems= new ArrayList();
+     //   ShoppingItem item = new ShoppingItem();
+     //   item.setName("item");
+     //   availableItems.add(item);
+
+        List<ShoppingItem> availableItems = shoppingService.getAvailableItems();
+
+        model.addAttribute("availableItems", availableItems);
+
+        // used to set tab selected
+        model.addAttribute("selectedPage", "admin");
+        return "catalog";
+    }
+
+   @RequestMapping(value = {"/createItem"}, method = RequestMethod.GET)
+    public String createItem(
+            Model model,
+            HttpSession session) {
+        String message = "";
+        String errorMessage = "";
+
+        model.addAttribute("selectedPage", "createItem");
+
+        LOG.debug("get create item page");
+
+        // check secure access to modifyUser profile
+        User sessionUser = getSessionUser(session);
+        model.addAttribute("sessionUser", sessionUser);
+
+        model.addAttribute("message", message);
+        model.addAttribute("errorMessage", errorMessage);
+        return "ModifyItem";
+    }
+
+    @RequestMapping(value = "/basket", method = {RequestMethod.GET, RequestMethod.POST})
+    public String basketCart(@RequestParam(name = "action", required = false) String action,
+            @RequestParam(name = "item.name", required = false) String itemName,
+            @RequestParam(name = "item.uuid", required = false) String itemUuid,
+            Model model,
+            HttpSession session
+    ) {
+        // get sessionUser from session
+        User user = getSessionUser(session);
+        model.addAttribute("user", user);
+        // used to set tab selected
+        model.addAttribute("selectedPage", "basket");
+        String message = "";
+        String errorMessage = "";
+        List<ShoppingItem> shoppingCartItems = shoppingCart.getShoppingCartItems();
+        Double shoppingcartTotal = shoppingCart.getTotal();
+        // populate model with values
+        model.addAttribute("shoppingCartItems", shoppingCartItems);
+        model.addAttribute("shoppingcartTotal", shoppingcartTotal);
+        return "basket";
+   }
 
     /*
      * Default exception handler, catches all exceptions, redirects to friendly

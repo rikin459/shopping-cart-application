@@ -6,16 +6,20 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%
-// request set in controller
-//    request.setAttribute("selectedPage","about");
-%>
+   request.setAttribute("selectedPage","about");
+   %>
 <jsp:include page="header.jsp" />
 <!-- Begin page content -->
-<main role="main" class="container">
-    <H1>About</H1>
+<main class="container">
+   <H1>Introduction</H1>
+   <p> To create a Shopping application that would allow a user or admin to do the following below  </p>
+   <ul>
+       <li> user can add items to a shopping cart</li>
+    <li> user can delete items from a shopping cart</li>
+    <li>users can make a transaction</li>
+    <li> admins can add items to the catalog</li>
+
+   </ul>
+   
 </main>
-
-
-
-
 <jsp:include page="footer.jsp" />
