@@ -4,10 +4,21 @@
     Author     : swapn
 --%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-	@@ -19,25 +19,28 @@
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@page import="org.solent.com504.oodd.cart.model.dto.User"%>
+<%@page import="org.solent.com504.oodd.cart.model.dto.UserRole"%>
+<c:set var = "selectedPage" value = "catalog" scope="request"/>
+<jsp:include page="header.jsp" />
+<!-- start of catalog.jsp selectedPage=${selectedPage}-->
+
+<!-- Begin page content -->
+<main role="main" class="container">
+
+    <div>
         <h1>Catalog</h1>
         <p>showing ${catalogListSize} items </p>
- <c:forEach var="item" items="${availableItems}">
+        <table class="table">
+        <c:forEach var="item" items="${availableItems}">
 
             <tr>
                 <td>${item.name}</td>
@@ -17,7 +28,7 @@
                     <form action="./home" method="get">
                         <input type="hidden" name="itemName" value="${item.name}">
                         <input type="hidden" name="action" value="addItemToCart">
-                    </form> 
+                    </form>
                 </td>
             </tr>
 
@@ -27,10 +38,10 @@
                     <tr>
                         <td>${item.name}</td>
                         <td>${item.price}</td>
-                        <td>${item.quantity}</td>                        
+                        <td>${item.quantity}</td>                       
                             <form action="./viewModifyItem" method="GET">
                                 <button class="btn" type="submit" >Modify Item</button>
-                            </form> 
+                            </form>
                         </td>
                     </tr>
                 </c:forEach>
@@ -38,7 +49,7 @@
         </table>
         <form action="./createItem" method="GET">
             <button class="btn" type="submit" >Add Item</button>
-        </form> 
+        </form>
     </div>
 </main>
 <jsp:include page="footer.jsp" />
