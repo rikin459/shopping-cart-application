@@ -46,7 +46,7 @@
     <property name="user.name" value="swapn"/>
     <property name="java.vm.specification.version" value="11"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dmaven.ext.class.path=C:\Program Files\NetBeans-12.4\netbeans\java\maven-nblib\netbeans-eventspy.jar -Dfile.encoding=UTF-8 --also-make --projects web install"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dmaven.ext.class.path=C:\Program Files\NetBeans-12.4\netbeans\java\maven-nblib\netbeans-eventspy.jar -Dfile.encoding=UTF-8 clean install"/>
     <property name="java.home" value="C:\Program Files\Java\jdk-11.0.12"/>
     <property name="user.language" value="en"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
@@ -64,6 +64,6 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="org.solent.com504.oodd.cart.service.test.ShoppingCartTest" name="testshoppingcart" time="0.005"/>
-  <testcase classname="org.solent.com504.oodd.cart.service.test.ShoppingCartTest" name="test1" time="0.001"/>
+  <testcase classname="org.solent.com504.oodd.cart.service.test.ShoppingCartTest" name="testshoppingcart" time="0.006"/>
+  <testcase classname="org.solent.com504.oodd.cart.service.test.ShoppingCartTest" name="test1" time="0"/>
 </testsuite>

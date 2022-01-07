@@ -10,9 +10,6 @@
 <%
    request.setAttribute("selectedPage","checkout");
 %>
-
-
-
 <%--import logging modules --%>
 <%@ page import="org.apache.logging.log4j.Logger" %>
 <%@ page import="org.apache.logging.log4j.LogManager" %>
