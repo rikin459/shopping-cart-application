@@ -24,6 +24,7 @@
       <div class="form-group">
          <div class="btn-group-vertical"
          </div>
+     
          <br>
          <div id="sender">
             <h1> Sender </h1>
