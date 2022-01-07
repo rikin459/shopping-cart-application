@@ -89,7 +89,7 @@ Below is to tables showing testing throughout the application users and admin.
 | 1 | User attempts to enters url . | If server is running then you will land on the home page , if not an error will be displayed  | PASSED |
 | 2 | User can log in or create an account | The application will grant acsess if the user has to correct details if the app dose not then an error will be displayed   | PASSED  |
 | 3 | user can add to the cart and browse| The app will add the item to the cart if use the user wishes and it will also add uo the total.  | PASSED  |
-| 4 | user can vist the basket page and press checkout  | app will open the basket and take you to checkout  |  FAILED |
+| 4 | user can vist the basket page and press checkout  | app will open the basket and take you to checkout  |  PASS |
 | 5 | User will enter  invalid or outdated card details. | The transcation would fail showing an error message . | FAILED | 
 | 6 | User enters correct card details | The transaction would approve and  send a message of comfimation   |  FAILED |
 | 7 | User is able to view orders in orders page |app shows all orders in the orders page | PASSED   |
