@@ -22,9 +22,7 @@
 <main class="container">
    <form class="form-card" method="POST" id="card-form">
       <div class="form-group">
-         <div class="btn-group-vertical"
-         </div>
-     
+          <div class="btn-group-vertical">
          <br>
          <div id="sender">
             <h1> Sender </h1>
