@@ -32,31 +32,31 @@
                <tbody>
                   <tr>
                      <td>Full Name</td>
-                     <td><input type="text" size="36" name="sender_name" value="Jeff Bezos" required></td>
+                     <td><input type="text" size="36" name="sender_name" value="" required></td>
                   </tr>
                   <tr>
                      <td>Credit Card Number</td>
-                     <td><input type="text" size="36" name="sender_ccnumber" value="5133880000000012" required></td>
+                     <td><input type="text" size="36" name="sender_ccnumber" value="" required></td>
                      <td><button name="selectButtons" type="button" class="btn ml-2 rounded" value="sender_ccnumber">Select</button></td>
                   </tr>
                   <tr>
                      <td>Issue Number</td>
-                     <td><input type="text" size="36" name="sender_issueNum" value="01" required></td>
+                     <td><input type="text" size="36" name="sender_issueNum" value="" required></td>
                      <td><button name="selectButtons" type="button" class="btn ml-2 rounded" value="sender_issueNum">Select</button></td>
                   </tr>
                   <tr>
                      <td>Expiry Date</td>
-                     <td><input type="text" size="36" name="sender_endDate" value="11/21" required></td>
+                     <td><input type="text" size="36" name="sender_endDate" value="" required></td>
                      <td><button name="selectButtons" type="button" class="btn ml-2 rounded" value="sender_endDate">Select</button></td>
                   </tr>
                   <tr>
                      <td>Cvv Code</td>
-                     <td><input type="text" size="36" name="sender_cvv" value="123" class="form-group col-md-2" required></td>
+                     <td><input type="text" size="36" name="sender_cvv" value="" class="form-group col-md-2" required></td>
                      <td><button name="selectButtons" type="button" class="btn ml-2 rounded" value="sender_cvv">Select</button></td>
                   </tr>
                   <tr>
                      <td>Amount</td>
-                     <td><input type="number" size="36" name="amount" value="10" class="form-group col-md-2" required></td>
+                     <td><input type="number" size="36" name="amount" value="" class="form-group col-md-2" required></td>
                      <td><button name="selectButtons" type="button" class="btn ml-2 rounded" value="amount">Select</button></td>
                   </tr>
                </tbody>
