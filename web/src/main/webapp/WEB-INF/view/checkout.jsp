@@ -22,8 +22,7 @@
 <main class="container">
    <form class="form-card" method="POST" id="card-form">
       <div class="form-group">
-         <div class="btn-group-vertical">
-            <input type="button" value="Check Credit card" onclick="document.getElementsByName('action')[0].value = 'lunn'"></input>
+         <div class="btn-group-vertical"
          </div>
          <br>
          <div id="sender">
