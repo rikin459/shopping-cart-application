@@ -124,6 +124,18 @@ public class MVCController {
         model.addAttribute("selectedPage", "about");
         return "about";
     }
+    
+    @RequestMapping(value = "/properties", method = {RequestMethod.GET, RequestMethod.POST})
+    public String propertiesCart(Model model, HttpSession session) {
+
+        // get sessionUser from session
+        User sessionUser = getSessionUser(session);
+        model.addAttribute("sessionUser", sessionUser);
+
+        // used to set tab selected
+        model.addAttribute("selectedPage", "properties");
+        return "properties";
+    }
 
      @RequestMapping(value = "/checkout", method = {RequestMethod.GET, RequestMethod.POST})
     public String viewcheckout(Model model, HttpSession session) {
