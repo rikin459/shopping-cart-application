@@ -132,3 +132,9 @@ Below is to tables showing testing throughout the application users and admin.
   ## Robustness diagram  
   The robustness diagram shows the whole web application working it also show how everything comunicates with each other. The robustness diagram also shows the user point of view as well as admin point of view. 
 ![no2](https://user-images.githubusercontent.com/72072104/148404613-a58b2d4e-42b2-403e-adcd-968c57d0543a.png)
+
+  ## model diagram 
+![model diagram](https://user-images.githubusercontent.com/72072104/148698887-3075acc6-1cce-405a-b1ab-9877504dd31c.png)
+
+
+  
