@@ -25,6 +25,8 @@ If username and password is required the default is admin and admin.
 The project will be on  http://localhost:8080/shoppingCartApplication/
 
 PLEASE NOTE : PLEASE BUILD WITH DEPENDENCIES BEFORE RUNNING THE PROJECT
+PLEASE NOTE : IF ANY ERRORS POP UP PLEASE PRESS  THE RESOLVE BUTTON AND THEN RUN THE PROGRAM 
+THANK YOU 
 Please also note that to view the diagrams below click on the diagram itself to see the full version as github dark mode ruins the photo
 Thank you 
 
