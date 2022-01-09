@@ -48,13 +48,15 @@
                             <li <% if ("home".equals(request.getAttribute("selectedPage"))) {%> class="active"  <% } %> ><a href="./home">Home</a></li> 
                             <li <% if ("about".equals(request.getAttribute("selectedPage"))) {%>  class="active"  <% } %> ><a href="./about">About</a></li> 
                             <li <% if ("contact".equals(request.getAttribute("selectedPage"))) {%>  class="active"  <% }%> ><a href="./contact">Contact</a></li>       
-                            <li <% if ("checkout".equals(request.getAttribute("selectedPage"))) {%>  class="active"  <% }%> ><a href="./checkout">checkout</a></li>      
+                            <li <% if ("basket".equals(request.getAttribute("selectedPage"))) {%>  class="active"  <% }%> ><a href="./basket">basket</a></li>      
                                 <c:if test="${sessionUser.userRole =='ADMINISTRATOR'}">
                                 <li class="dropdown" >
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Admin <span class="caret"></span></a>
                                     <ul class="dropdown-menu">
                                         <li><a href="./users">Manage Users</a></li>
                                         <li><a href="./catalog">Manage Catalogue</a></li>
+                                        <li><a href="./properties">Manage Properties</a></li>
+                                        <li><a href="./orders">Manage Orders</a></li>
                                     </ul>
                                 </li>
                             </c:if>
