@@ -15,7 +15,7 @@
 <main role="main" class="container">
 
     <div>
-        <H1>Modify Item: ${modifyItem.name} </H1>
+        <H1>Modify Item: ${ModifyItem.name} </H1>
         <!-- print error message if there is one -->
         <div style="color:red;">${errorMessage}</div>
         <div style="color:green;">${message}</div>
